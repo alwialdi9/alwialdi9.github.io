@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Games</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div id="logo">STORE GAMES</div> -->
+        <div class="navigation-wrapper">
+            <div class="navigation-button">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="navigation-menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Me</a></li>
+                    <li><a href="">My Project</a></li>
+                    <li><a href="">Contact</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <section class="hero">
+            <h1>CREATIVE DESIGN <br>
+                <span class="gradient">INTRODUCING</span></h1>
+            <div class="button">
+                <a href="" class="btn1">Get Started</a>
+                <a href="" class="btn2">Get Featured</a>
+
+            </div>
+        </section>
+    </div>
+
+    <script>
+        var navButton = document.querySelector('.navigation-button');
+        var navMenu = document.querySelector('.navigation-menu');
+        var win = window;
+
+        function openMenu(event) {
+
+            navButton.classList.toggle('active');
+            navMenu.classList.toggle('active');
+
+            event.preventDefault();
+            event.stopImmediatePropagation();
+        }
+
+        function closeMenu(event) {
+            if (navButton.classList.contains('active')) {
+                navButton.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        }
+        navButton.addEventListener('click', openMenu, false);
+
+        win.addEventListener('click', closeMenu, false);
+    </script>
+
+</body>
+
+</html>
